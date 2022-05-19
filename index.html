@@ -6,93 +6,97 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Datos Personales</title>
     </head>
-    <body>
+    <body bgcolor="pink">
         <h1> <center>Datos Personales</center> </h1>
-        <table border="5">
-            <tHead>
-                <tr>
-                    <th>Dato</th>
-                    <th>Valor</th>
-                </tr>
-            </tHead>
-            <tbody>
-                <tr>
-                    <td><label>cedula</label></td>
-                    <td>
-                        <input type="number" name="txtCedula" id="txtCedula">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>Nombre</label></td>
-                    <td><input type="text" name="txtNombre" id="txtNombre"></td>
-                </tr>
-                <tr>
-                    <td><label>Telefono</label></td>
-                    <td>
-                        <input type="text" name="txtTel" id="txtTel">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>Correo</label></td>
-                    <td>
-                        <input type="email" name="txtMail" id="txtMail">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>Fecha de Nacimiento</label></td>
-                    <td>
-                        <input type="date" name="txtDate" id="txtDate">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>Color Fav</label></td>
-                    <td>
-                        <input type="color" name="txtColor" id="txtColor">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>Pais de Nacimiento</label></td>
-                    <td>
-                        <select name="cboPais" id="cboPais">
-                            <option value="1">Monaco</option>
-                            <option value="2" selected >Colombia</option>
-                            <option value="3">Venezuela</option>
-                            <option value="4">Russia</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>Hobby</label></td>
-                    <td>
-                        <input type="checkbox" name="chkFulvol" id="chkFulvol"> Fulvol
-                        <input type="checkbox" name="chkPolitica" id="chkPolitica"> Politica
-                        <input type="checkbox" name="chkBailar" id="chkBailar"> Bailar
-                        <input type="checkbox" name="chkPatinar" id="chkPatinar">   Patinar
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>Sexo</label></td>
-                    <td>
-                        <input type="radio" name="optSexo" id="optSexo"> Hombre
-                        <input type="radio" name="optSexo" id="optSexo"> Mujer
-                        <input type="radio" name="optSexo" id="optSexo"> Otro
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>Edad</label></td>
-                    <td>
-                        <input type="number" name="txtEdad" id="txtEdad" min="1" max="130">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>Descripcion</label></td>
-                    <td>
-                        <textarea name="txtDescripcion" id="txtDescripcion" cols="30" rows="1"></textarea>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <input type="submit" value="Enviar">
-        <button type="reset">Limpiar</button>
+        <center>
+            <form action="resultado.html" >
+                <table border="5" >
+                    <tHead>
+                        <tr>
+                            <th>Dato</th>
+                            <th>Valor</th>
+                        </tr>
+                    </tHead>
+                    <tbody>
+                        <tr>
+                            <td><label>cedula</label></td>
+                            <td>
+                                <input type="number" name="txtCedula" id="txtCedula" placeholder="cedula">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Nombre</label></td>
+                            <td><input type="text" name="txtNombre" id="txtNombre" placeholder="nombre"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Telefono</label></td>
+                            <td>
+                                <input type="text" name="txtTel" id="txtTel" placeholder="Phone">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Correo</label></td>
+                            <td>
+                                <input type="email" name="txtMail" id="txtMail" placeholder="e-mail">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Fecha de Nacimiento</label></td>
+                            <td>
+                                <input type="date" name="txtDate" id="txtDate" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Color Fav</label></td>
+                            <td>
+                                <input type="color" name="txtColor" id="txtColor">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Pais de Nacimiento</label></td>
+                            <td>
+                                <select name="cboPais" id="cboPais">
+                                    <option value="1">Monaco</option>
+                                    <option value="2" selected >Colombia</option>
+                                    <option value="3">Venezuela</option>
+                                    <option value="4">Russia</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Hobby</label></td>
+                            <td>
+                                <input type="checkbox" name="chkFulvol" id="chkFulvol"> Fulvol
+                                <input type="checkbox" name="chkPolitica" id="chkPolitica"> Politica
+                                <input type="checkbox" name="chkBailar" id="chkBailar"> Bailar
+                                <input type="checkbox" name="chkPatinar" id="chkPatinar">   Patinar
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Sexo</label></td>
+                            <td>
+                                <input type="radio" name="optSexo" id="optSexo"> Hombre
+                                <input type="radio" name="optSexo" id="optSexo"> Mujer
+                                <input type="radio" name="optSexo" id="optSexo"> Otro
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Edad</label></td>
+                            <td>
+                                <input type="number" name="txtEdad" id="txtEdad" min="1" max="130" placeholder="edad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Descripcion</label></td>
+                            <td>
+                                <textarea name="txtDescripcion" id="txtDescripcion" cols="30" rows="1"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="submit" value="Enviar">
+                <button type="reset">Limpiar</button>
+            </form>
+        </center>
     </body>
 </html>
