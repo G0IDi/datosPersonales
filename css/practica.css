@@ -1,0 +1,37 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.fondoBarra{
+    width: 100%;
+    height: 250px;
+    background-color: coral;
+}
+
+.barra{
+    width: 90%;
+    height: 75px;
+    background-color: orangered;
+}
+
+.men li{
+    display: inline;
+    background-color: crimson;
+    padding: 2px;
+}
+.woman li{
+    display: inline;
+    background-color: crimson;
+    padding: 2px;
+}
+
+.men li:hover { 
+    background-color: skyblue;
+
+}
+.woman li:hover{
+    background-color: blueviolet;
+}
+    
+
