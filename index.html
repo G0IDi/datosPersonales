@@ -7,44 +7,39 @@
         <title>Datos Personales</title>
         <script>
             function validar(e){
-                e.preventDefault();
+            e.preventDefault();
 
-                let cedula = document.getElementById("txtCedula");
-                let nombre = document.getElementById("txtNombre");
-                let phone =  document.getElementById("txtTel");
-                let mail = document.getElementById("txtMail");
-                let valida = false;
-                let formulario = document.getElementById("formulario");
+            let cedula = document.getElementById("txtCedula");
+            let nombre = document.getElementById("txtNombre");
+            let phone =  document.getElementById("txtTel");
+            let mail = document.getElementById("txtMail");
+            let valida = false;
+            let formulario = document.getElementById("formulario");
 
-                if (cedula.value == ""){
-                    console.log ("cedula esta vacia");
-                    valida  = true;
-                    
-                }
-                if (nombre.value == ""){
-                    console.log ("nombre esta vacio");
-                    valida  = true;
-                }
-                if (phone.value == ""){
-                    console.log ("telefono esta vacio");
-                    valida  = true;
-                }
-                if (mail.value == "" or /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/){
-                    console.log ("mail esta vacio o incorrecto");
-                    valida  = true;
-                }
-                if (valida == false){
-                    formulario.submit();
-                }
-                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(mail)){
-                    alert("La dirección de email " + mail + " es correcta.");
-                } else {
-                    valida = true
-                    alert("La dirección de email es incorrecta.");
-                }
+            if (cedula.value == ""){
+                console.log ("cedula esta vacia");
+                valida  = true;
                 
-            
-
+            }
+            if (nombre.value == ""){
+                console.log ("nombre esta vacio");
+                valida  = true;
+            }
+            if (phone.value == ""){
+                console.log ("telefono esta vacio");
+                valida  = true;
+            }
+            if (valida == false){
+                formulario.submit();
+            }
+            let expReg= (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(correo.value));
+            let Esvalido= expReg.test(correo.value);
+                if (Esvalido==true){
+                alert("La dirección de email " + mail + " es correcta.");
+            } else {
+                valida = true
+                alert("La dirección de email es incorrecta.");
+            }   
         </script>
     </head>
     <body bgcolor="pink">
