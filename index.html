@@ -5,11 +5,52 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Datos Personales</title>
+        <script>
+            function validar(e){
+                e.preventDefault();
+
+                let cedula = document.getElementById("txtCedula");
+                let nombre = document.getElementById("txtNombre");
+                let phone =  document.getElementById("txtTel");
+                let mail = document.getElementById("txtMail");
+                let valida = false;
+                let formulario = document.getElementById("formulario");
+
+                if (cedula.value == ""){
+                    console.log ("cedula esta vacia");
+                    valida  = true;
+                    
+                }
+                if (nombre.value == ""){
+                    console.log ("nombre esta vacio");
+                    valida  = true;
+                }
+                if (phone.value == ""){
+                    console.log ("telefono esta vacio");
+                    valida  = true;
+                }
+                if (mail.value == "" or /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/){
+                    console.log ("mail esta vacio o incorrecto");
+                    valida  = true;
+                }
+                if (valida == false){
+                    formulario.submit();
+                }
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(mail)){
+                    alert("La dirección de email " + mail + " es correcta.");
+                } else {
+                    valida = true
+                    alert("La dirección de email es incorrecta.");
+                }
+                
+            
+
+        </script>
     </head>
     <body bgcolor="pink">
         <h1> <center>Datos Personales</center> </h1>
         <center>
-            <form action="resultado.html" method="post" >
+            <form action="resultado.html" method="post" id="formulario">
                 <table border="5" >
                     <tHead>
                         <tr>
@@ -94,9 +135,9 @@
                         </tr>
                     </tbody>
                 </table>
-                <input type="submit" value="Enviar">
+                <input type="submit" value="Enviar" onclick="validar(event);">
                 <button type="reset">Limpiar</button>
             </form>
-        </center>
+        </center    >
     </body>
 </html>
